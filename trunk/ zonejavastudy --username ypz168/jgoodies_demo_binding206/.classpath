@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/tutorial"/>
+	<classpathentry kind="src" path="src/test"/>
+	<classpathentry kind="src" path="src/extras"/>
+	<classpathentry kind="src" path="src/core"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.6.0_24"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/jgoodies_demo_forms130"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

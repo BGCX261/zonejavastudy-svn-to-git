@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component xmlns="http://yan-dev.javaeye.com" name="RMIServerService">
+   <implementation class="com.yan.dev.rmi.server.intf.impl.PlayImpl"/>
+   <service>
+      <provide interface="com.yan.dev.rmi.common.intf.IPlay"/>
+   </service>
+   <property name="remote" type="Boolean" value="True"/>
+   <property name="location" type="String" value="all"/>
+</component>

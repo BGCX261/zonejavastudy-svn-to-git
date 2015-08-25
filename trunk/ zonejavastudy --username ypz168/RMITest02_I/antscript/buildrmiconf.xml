@@ -1,0 +1,51 @@
+<!--
+ * Comment for buildservice.java
+ *
+ * @author <a href="mailto:yan.dev@hotmail.com">yan.dev</a>
+ * 
+ * @blog:<a href="http://yan-dev.javaeye.com"><b>yan.dev's Blog</b></a>
+ * @version 1.0
+ * @time 2011-3-23 下午03:42:31
+ *
+ -->
+<project name="buildrmiconf" default="build">  
+    <target name="init">  
+        <!-- check for xbean.jar from binary distribution -->
+        <available
+            property="xmlbeans.lib"
+            value="../xmlbeanlib"
+            file="../xmlbeanlib/xbean.jar" />
+
+        <fail message="Set XMLBEANS_HOME in your enviornment."
+            unless="xmlbeans.lib"/>
+
+        <echo message="xmlbeans.lib: ${xmlbeans.lib}"/>
+        <path id="xmlbeans.path">
+            <fileset dir="${xmlbeans.lib}" includes="*.jar"/>
+        </path>
+
+        <taskdef name="xmlbean"
+            classname="org.apache.xmlbeans.impl.tool.XMLBean"
+            classpathref="xmlbeans.path"/>
+    </target>
+
+	<!-- ========================== clean ==== -->
+
+    <target name="clean">
+        <delete dir="../build"/>
+    </target>
+
+	<!-- ========================== build ==== -->
+    <target name="build" depends="init"  >  
+    	<mkdir dir="../build/src"/>				
+		<!-- Generating with XSD only (no config file) -->
+        <xmlbean schema="../schemas/rmiconf"
+            destfile="../../RMITest02_S/lib/rmiconf.jar"
+            srcgendir="../build/src"
+            classpathref="xmlbeans.path"
+            debug="on"
+            />  
+    	<antcall target="clean"/>
+    </target> 
+  
+</project>

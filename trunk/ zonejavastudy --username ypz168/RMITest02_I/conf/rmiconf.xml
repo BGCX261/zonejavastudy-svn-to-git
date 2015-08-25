@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rmiconf xmlns="http://yan-dev.javaeye.com" serverip="localhost" clientip="localhost" port="1234"></rmiconf>
+

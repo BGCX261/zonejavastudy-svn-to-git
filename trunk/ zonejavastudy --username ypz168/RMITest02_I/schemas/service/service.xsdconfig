@@ -1,0 +1,8 @@
+<xb:config xmlns:xb="http://xml.apache.org/xmlbeans/2004/02/xbean/config"
+           >
+           
+  <xb:namespace uri="http://yan-dev.javaeye.com">
+    <xb:package>com.yan.dev.rmi.service.xsd</xb:package>    	
+  </xb:namespace> 
+
+</xb:config>

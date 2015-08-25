@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component xmlns="http://yan-dev.javaeye.com" name="RMIServerService">
+   <implementation class="com.yan.dev.rmi.server.RMIServerImpl"/>
+   <service>
+      <provide interface="com.yan.dev.rmi.server.IRMIServer"/>
+   </service>
+</component>

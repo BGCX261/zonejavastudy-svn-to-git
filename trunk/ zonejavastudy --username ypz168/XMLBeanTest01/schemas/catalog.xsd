@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--W3C Schema 由 XMLSpy v2006 U 创建 (http://www.altova.com)-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://xmlbeans.apache.org/samples/catalog" xmlns="http://xmlbeans.apache.org/samples/catalog" elementFormDefault="qualified">
+	<xs:element name="a-very-long-description-element">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="forsample"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="article">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="title"/>
+				<xs:element ref="author"/>
+				<xs:element ref="a-very-long-description-element"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="author">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="Douglas A. Clark"/>
+				<xs:enumeration value="J. E. Moreira et.al."/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="catalog">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="journal" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="forsample">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="This document can be found at http://www.cuj.com/documents/s=8467/cujjsup2010clark/clark.htm "/>
+				<xs:enumeration value="This is a sample element for journal-1"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="journal">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="article"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="title">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="Dynamically Binding EJBs Using the Java Reflection API"/>
+				<xs:enumeration value="Java programming for high-performance numerical computing"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+</xs:schema>

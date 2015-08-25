@@ -1,0 +1,40 @@
+<!--
+ * Comment for build.xml
+ *
+ * @author <a href="mailto:yan.dev@hotmail.com">yan.dev</a>
+ * 
+ * @blog:<a href="http://yan-dev.javaeye.com"><b>yan.dev's Blog</b></a>
+ * @version 1.0
+ * @time 2011-3-23 下午03:42:31
+ *
+ -->
+<project name="build" default="build">  
+    <target name="init">   
+        <available
+            property="xmlbeans.lib"
+            value="../xmlbeanlib"
+            file="../xmlbeanlib/xbean.jar" /> 
+        <echo message="xmlbeans.lib: ${xmlbeans.lib}"/>
+        <path id="xmlbeans.path">
+            <fileset dir="${xmlbeans.lib}" includes="*.jar"/>
+        </path>
+        <taskdef name="xmlbean"
+            classname="org.apache.xmlbeans.impl.tool.XMLBean"
+            classpathref="xmlbeans.path"/>
+    </target>
+	<!-- ========================== clean ==== -->
+    <target name="clean">
+        <delete dir="../build"/>
+    </target>
+	<!-- ========================== build ==== -->
+    <target name="build" depends="init"  >  
+    	<mkdir dir="../build/src"/>
+        <xmlbean schema="../schemas"
+            destfile="../lib/catalog.jar"
+            srcgendir="../build/src"
+            classpathref="xmlbeans.path"
+            debug="on"
+            />  
+    	<antcall target="clean"/>
+    </target>   
+</project>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="http://xmlbeans.apache.org/samples/catalog">
+	<journal>
+		<article>
+			<title>Java programming for high-performance numerical computing</title>
+			<author>J. E. Moreira et.al.</author>
+			<a-very-long-description-element>
+				<forsample>This is a sample element for journal-1</forsample>
+			</a-very-long-description-element>
+		</article>
+	</journal>
+	<journal>
+		<article>
+			<title>Dynamically Binding EJBs Using the Java Reflection API</title> 
+			<author>Douglas A. Clark</author>
+			<a-very-long-description-element>
+				<forsample>This document can be found at http://www.cuj.com/documents/s=8467/cujjsup2010clark/clark.htm </forsample>
+			</a-very-long-description-element>
+		</article>
+	</journal>
+
+</catalog>
